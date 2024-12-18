@@ -1,0 +1,14 @@
+The corrected CSS code addresses the issue of mixing percentages and pixels in the `calc()` function. To ensure correct calculation, it's recommended to use consistent units or make sure that the order of operations within `calc()` are correct.
+```css
+div {
+  /*Corrected code*/
+  width: calc(50% - 10px); /*This is often correct*/
+  /*Alternative approach (often safer, more readable and maintainable):*/
+  width: 50%;
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+```
+The solution is to completely refactor the usage of calc() to avoid using percentage and pixels in the same expression.  Using margin, padding, or other ways to achieve the desired outcome is generally preferred over complex calc() expressions for maintainability.
