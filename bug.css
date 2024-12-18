@@ -1,0 +1,7 @@
+The following CSS code snippet uses the `calc()` function to calculate the width of an element. However, it contains an error that causes the element to not render correctly.  The error is in the calculation of the percentage values. 
+```css
+div {
+  width: calc(50% - 10px);
+}
+```
+The `calc()` function operates correctly when performing arithmetic between percentages and pixels. However,  it sometimes fails with different units within the expression, like em or rem combined with %. The order of operations also matters.  This error is subtle and often overlooked.
